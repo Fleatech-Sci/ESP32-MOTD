@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Message of the Day</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .motd {
+            padding: 15px;
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+        .version-info {
+            font-family: monospace;
+            background-color: #f8f9fa;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-top: 20px;
+            white-space: pre-wrap;
+        }
+        .timestamp {
+            text-align: right;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.8em;
+            color: #95a5a6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Message of the Day</h1>
+        
+        <div class="motd">
+            Welcome to our ESP32 system! This is your daily message. Remember to check back regularly for important updates and announcements.
+        </div>
+        
+        <div class="version-info">
+Sketch:   %FILENAME%
+Compiled: %DATE% %TIME%
+GCC:      %VERSION%
+Code Designed & Rewritten by: Author
+        </div>
+        
+        <div class="timestamp">
+            Current time: <span id="datetime">-</span>
+        </div>
+        
+        <div class="footer">
+            Powered by ESP32 Webserver
+        </div>
+    </div>
+
+    <script>
+        // Simple script to display current date
+        document.getElementById('datetime').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>
