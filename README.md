@@ -3,8 +3,7 @@
  
  Tested with the following dependancies.
  
- esp32\3.2.0\libraries\WiFi.
- 
+ esp32\3.2.0\libraries\WiFi.<br />
  esp32\hardware\esp32\3.2.0\libraries\WebServer.<br />
  Using library WiFi at version 3.2.0.<br />
  Using library Networking at version 3.2.0.<br />
